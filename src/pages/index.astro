@@ -1,0 +1,222 @@
+---
+const email = 'hola@enriqueperalta.com';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Enrique Peralta — Building end-to-end software tools that are exciting, useful and solve specific problems." />
+    <title>Enrique Peralta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="top">
+        <div class="left">
+          <h1>Hola!<br />I'm Enrique Peralta</h1>
+          <address>
+            <span>Reach out at:</span>
+            <a href={`mailto:${email}`}>{email}</a>
+          </address>
+        </div>
+
+        <div class="right">
+          <p>
+            I started my journey as a Design Researcher but kept hitting the
+            same wall: great insights took months to validate. Now, I build
+            end-to-end software tools that are exciting, useful and solve
+            specific problems.
+          </p>
+          <p>
+            I'm also creating a career transitions community at The{' '}
+            <a href="https://www.linkedin.com/company/thefiguringoutclub/">
+              Figuring Out Club
+            </a>{' '}
+            and making food political at{' '}
+            <a href="https://www.instagram.com/mes.esmes/">Més és Més</a>.
+          </p>
+        </div>
+      </div>
+
+      <nav class="ctas">
+        <a href="https://enriqueperalta.framer.website/" class="btn btn-orange">
+          Industry portfolio
+        </a>
+        <a
+          href="https://www.linkedin.com/in/enrique-peralta/"
+          class="btn btn-outline"
+        >
+          Linkedin
+        </a>
+      </nav>
+    </main>
+  </body>
+</html>
+
+<style>
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    background-color: #0266ff;
+    color: #ffffff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  main {
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 60px;
+  }
+
+  /* ── Top section ── */
+  .top {
+    display: flex;
+    gap: 80px;
+    flex: 1;
+  }
+
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  h1 {
+    font-size: 72px;
+    line-height: 0.9;
+    font-weight: 400;
+  }
+
+  address {
+    font-style: normal;
+    font-size: 32px;
+    line-height: 1.1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  address a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  address a:hover {
+    text-decoration: underline;
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25em;
+    font-size: 32px;
+    line-height: 1.25;
+  }
+
+  .right a {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  /* ── CTAs ── */
+  .ctas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border-radius: 32px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 32px;
+    line-height: 1.1;
+    text-decoration: none;
+    color: #ffffff;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: opacity 0.15s ease;
+  }
+
+  .btn:hover {
+    opacity: 0.8;
+  }
+
+  .btn-orange {
+    background-color: #f4752e;
+    font-weight: 500;
+  }
+
+  .btn-outline {
+    border: 2px solid #ffffff;
+    font-weight: 400;
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 768px) {
+    main {
+      padding: 40px 24px;
+      gap: 48px;
+      min-height: 100dvh;
+    }
+
+    .top {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    h1 {
+      font-size: 44px;
+    }
+
+    address {
+      font-size: 20px;
+    }
+
+    .right {
+      font-size: 20px;
+    }
+
+    .ctas {
+      flex-direction: column;
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .btn {
+      font-size: 20px;
+      justify-content: center;
+      padding: 12px 20px;
+    }
+  }
+</style>
